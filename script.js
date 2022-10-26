@@ -29,11 +29,14 @@ async function getDataFromUrl(url, func) {
 	console.log(data);
 }
 
+
 function populateUsers(data) {
 	const output = document.getElementById("output");
+    output.innerHTML = "";
     
 	data.forEach((dataItem) => {
         const outputbox = document.createElement("div");
+        outputbox.classList.add("outputbox");
 
         const login = document.createElement("div");
         login.textContent = dataItem.login;
@@ -46,11 +49,16 @@ function populateUsers(data) {
         outputbox.append(login, avatarPicture)
         output.append(outputbox);
 	});
+    
 }
 
+document.getElementById("btn").addEventListener('click', () => {
+    getDataFromUrl(ENDPOINT,populateUsers);
+    });
+
+       
 
 
-getDataFromUrl(ENDPOINT, populateUsers);
 
 
 

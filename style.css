@@ -52,10 +52,34 @@
 	color: #fff;
 }
 
-.output-cointainer #output {
+.output-cointainer {
 	width: 80%;
 	margin-top: 25px;
 	padding: 30px;
 	border-radius: 5px;
 	background-color: #fff;
+}
+.avatar_pic {
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.login {
+ text-align: center;
+}
+
+.outputbox {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 200px;
+}
+#output {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 50px;
+	
+	
 }
